@@ -1,0 +1,17 @@
+:root {
+  --normal-font-family: "Didact Gothic", sans-serif;
+  --heading-font-family: "MuseoModerno", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--normal-font-family);
+}
+
+.image-container {
+  background-image: url(image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
