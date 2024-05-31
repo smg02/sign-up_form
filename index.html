@@ -27,42 +27,47 @@
                 <img class="logo" src="./logo.png" alt="" srcset="">
                 esuo
             </div>
+            <div class="credits">
+                Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on Unsplash
+            </div>
         </div>
     
         <div class="main-container">
-            <div class="text-one">
-                In the end you will look back and think "What have I done with my Life?" <span>Make no mistake</span>
-            </div>
-            <form action="#" method="post">
-                <div class="form">
-                    <div class="left">
-                        <label for="first-name">FIRST NAME</label>
-                        <input id="first-name" class="first-name" type="text" required>
-                       
-                        <label for="email">EMAIL</label>
-                        <input id="email" class="email" type="email" required>
-    
-                        <label for="password">PASSWORD</label>
-                        <input id="password" class="password" type="text" required>
-    
-                    </div>
-                    
-                    <div class="right">
-                        <label for="last-name">LAST NAME</label>
-                        <input id="last-name" class="last-name" type="text" required>
-                        
-                        <label for="phn-number">PHONE</label>
-                        <input id="phn-number" class="phn-number" type="tel" required>
-    
-                        <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input id="confirm-password" class="confirm-password" type="text" required>
-                    </div>
+            <div class="nested-container">
+                <div class="text-one">
+                    In the end you will look back and think, <span>What have I done with my Life?</span> Make no mistake
                 </div>
-
-                <button type="submit">Create Account</button>
-            </form>
-            <div class="login">
-                Already have an account? <a href="#">Login</a>
+                <form action="https://httpbin.org/post" method="post">
+                    <div class="form">
+                        <div class="left">
+                            <label for="first_name">FIRST NAME</label>
+                            <input id="first_name" name="first_name" type="text" placeholder="ex. Syed" required>
+                           
+                            <label for="email">EMAIL</label>
+                            <input id="email" name="email" type="email" placeholder="ex. abc123@email.com" required>
+        
+                            <label for="password">PASSWORD</label>
+                            <input id="password" name="password" type="password" placeholder="ex. your name with year of birth" required>
+        
+                        </div>
+                        
+                        <div class="right">
+                            <label for="last_name">LAST NAME</label>
+                            <input id="last_name" name="last_name" type="text" placeholder="ex. Ghouse" required>
+                            
+                            <label for="phn_number">PHONE</label>
+                            <input id="phn_number" name="phn_number" type="number" placeholder="ex. 9876543210" required>
+        
+                            <label for="confirm_password">CONFIRM PASSWORD</label>
+                            <input id="confirm_password" name="confirm_password" type="password" placeholder="same as password" required>
+                        </div>
+                    </div>
+    
+                    <button type="submit">Create Account</button>
+                    <div class="login">
+                        Already have an account? <a href="#">Login</a>
+                    </div>
+                </form>
             </div>
         </div>
 

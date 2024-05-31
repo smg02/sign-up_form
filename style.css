@@ -1,9 +1,11 @@
 :root {
-  --background-color: #eeeeee;
-  --text-color: #373a40;
-  --main-color: rgb(249, 115, 0);
-  --secondary-color: #686d76;
-  --error-color: tomato;
+  --background-color: 255, 255, 255;
+  --text-color: rgb(24,24,24);
+  --main-color: rgb(240,0,255);
+  --secondary-color: rgb(173,90,255);
+  --error-color: rgb(255,39,65);
+
+  --valid-color:rgb(155,54,255);
 
   --normal-font-family: "Didact Gothic", sans-serif;
   --heading-font-family: "MuseoModerno", sans-serif;
@@ -12,10 +14,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: 0, 0, 0;
-    --text-color: rgb(226, 223, 208);
-    --main-color: rgb(50, 1, 47);
-    --secondary-color: rgb(249, 115, 0);
-    --error-color: tomato;
+    --text-color: rgb(255,252,252);
+    --main-color: rgb(54,46,46);
+    --secondary-color: rgb(255,94,54);
+    --error-color: rgb(255,39,65);
+
+    --valid-color: rgba(255, 255, 0, 0.7);
   }
 }
 
@@ -39,6 +43,7 @@
 .logo {
   width: 3.5vw;
   height: 3.5vw;
+  background-color: transparent;
 }
 
 .banner {
@@ -50,7 +55,7 @@
   align-items: center;
   color: var(--text-color);
   font-size: 3.5vw;
-  background-color: rgba(var(--background-color), 0.55);
+  background-color: rgba(var(--background-color), 0.4);
   width: 100%;
   gap: 10px;
   padding: 25px 0;
@@ -62,38 +67,43 @@ body {
 
 .main-container {
   margin: 25vh auto;
-  font-size: min(20px, 1rem);
-  /* display: flex;
+  /* font-size: min(20px, 1rem);
+  display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%; */
 }
 
 .form {
-  font-size: 0.7rem;
+  font-size: 1rem;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  gap: 1rem;
 }
 
-.form > div {
-  margin-bottom: 20px;
-}
+
 
 input {
-  border: 1px solid var(--secondary-color);
+  border: 1.5px solid var(--secondary-color);
   line-height: 1.5rem;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 3px;
+  width: 13vw;
+  transition: 200ms;
+}
+
+input:valid {
+  border-color: var(--valid-color);
 }
 
 input:invalid {
   border-color: var(--error-color);
 }
 
-input:valid {
-  border-color: rgba(255, 255, 0, 0.7);
+input:focus {
+  scale: 1.2;
 }
 
 .left, .right {
@@ -103,13 +113,51 @@ input:valid {
 
 label {
   margin-top: 10px;
+  font-size: 0.8rem;
 }
 
 button {
-  padding: 7px 20px;
+  margin: 1.5rem;
+  padding: 10px 20px;
   font-weight: 700;
   background-color: var(--secondary-color);
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  transition: 200ms;
+}
+
+button:hover {
+  background-color: var(--error-color);
+  scale: 1.2;
+}
+
+.text-one {
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.login {
+  margin-left: 1rem;
+}
+
+span {
+  color: var(--secondary-color);
+}
+
+.nested-container {
+  margin: 0 10vw;
+}
+
+.credits {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.7rem;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+}
+
+a {
+  background-color: transparent;
 }
